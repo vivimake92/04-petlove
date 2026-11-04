@@ -1,20 +1,16 @@
 import "./App.css";
 
 import Header from "./components/Header";
-import PetCard from "./components/PetCard";
+import PetList from "./components/PetList";
+
+import pets from "./data/pets";
 
 function App() {
   return (
     <>
       <Header />
 
-      <PetCard
-        emoji={"cat"}
-        name={"Nina"}
-        specie={"Gata"}
-        age={"5 meses"}
-        size={"Porte Pequeno"}
-      />
+      <PetList pets={pets} />
     </>
   );
 }
