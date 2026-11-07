@@ -1,19 +1,9 @@
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import "./adoption-form.css";
+import schema from "../../libs/validation";
 
-const schema = z.object({
-  petId: z.string().min(1, "Escolha pelo menos um pet"),
-  name: z.string().min(2, "Digite seu nome completo!"),
-  email: z.email("Digite um e-mail válido!"),
-  whatsapp: z.string().min(1, "Use o DDD e os nove dígitos!"),
-  birthDate: z.string().min(1, "Informe a data de nascimento!"),
-  housing: z.string().min(1, "Escolha uma moradia!"),
-  reason: z.string().min(20, "Conte um pouco mais sobre o motivo da adoção..."),
-  terms: z.literal(true, "Você deve aceitar os termos!"),
-});
+import "./adoption-form.css";
 
 export default function AdoptionForm({ pets }) {
   const {
