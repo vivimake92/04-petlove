@@ -17,8 +17,6 @@ function isUnderAge(birthDate) {
 
   const isUnderAge = currentYear - birthYear <= 18;
 
-  console.log(isUnderAge);
-
   return !isUnderAge;
 
   //console.log(typeof year);
