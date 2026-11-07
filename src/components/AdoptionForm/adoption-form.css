@@ -66,3 +66,8 @@
   font-size: 16px;
   font-weight: bold;
 }
+
+.adoption-form button:disabled {
+  background-color: #d6c9bb;
+  color: #5e544b;
+}
